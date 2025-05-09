@@ -3,18 +3,18 @@ from twilio.rest import Client
 
 
 # Company name.
-STOCK_NAME = "TSLA"
-COMPANY_NAME = "Tesla Inc"
+STOCK_NAME = "INSERT STOCK NAME"
+COMPANY_NAME = "INSERT COMPANY NAME"
 
 # Api Calls and Keys.
 STOCK_ENDPOINT = "https://www.alphavantage.co/query" # API endpoint for Alpha Vantage
-ALPHAVANTAGE_API_KEY = "8K7OONSVY5ELD03U" # Api Key for Alpha Vantage
+ALPHAVANTAGE_API_KEY = "INSERT ALPHA AVANTAGE API KEY" # Api Key for Alpha Vantage
 
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything" # API endpoint for News API
-NEWSAPI_API_KEY = "d24a2cc218464d9a9b39ccf3f8eabeb0" # API Key for News API
+NEWSAPI_API_KEY = "INSERT NEW API KEY" # API Key for News API
 
-TWILIO_ACCOUNT_SID = "AC133a9dd29e7fc6b519813fdabf5e3860" # Twilio account ID
-TWILIO_AUTH_TOKEN = "2a39c55c9ff2eb5cbd408b53105781c8" # Twilio auth token
+TWILIO_ACCOUNT_SID = "INSERT TWILIO SID" # Twilio account ID
+TWILIO_AUTH_TOKEN = "INSERT TWILIO AUTH TOKEN" # Twilio auth token
 
 
 # Parameters for the Alpha Vantage API call.
@@ -70,7 +70,7 @@ if abs(closing_price_difference_percentage) > 5:
         client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)  # Making the API call in Twilio to send the SMS
         message = client.messages.create(
          body=articles,  # SMS Message
-         from_="+12317511937",  # Number from Twilio
-         to="+5521970135600",  # Your phone number
+         from_="INSERT TWILIO PHONE NUMBER",  # Phone Number from Twilio
+         to="INSERT YOUR PHONE NUMBER",  # Your phone number
         )
         print(message.status)
