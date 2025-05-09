@@ -47,7 +47,7 @@ closing_price_difference = abs(float(yesterday_closing_price) - float(before_yes
                                                                                                        # closing prices from yesterday and before yesterday with absolute float values
 
 closing_price_difference_percentage = round((closing_price_difference / float(before_yesterday_closing_price)) * 100) # Difference between the
-                                                                                                               # closing prices from yesterday and before yesterday with percentage values
+                                                                                                                      # closing prices from yesterday and before yesterday with percentage values
 
 
 # Check the differences on the closing prices to show the emoji according to the price evaluation.
