@@ -1,18 +1,18 @@
-# Stock News Alert - [Company Name]
+# Stock News Alert
 
 ## Overview
 
-This Python script monitors the stock price of a specified company ([Company Name]) using the Alpha Vantage API. It compares the closing price of the stock from yesterday to the day before yesterday. If the percentage difference in closing prices is greater than a defined threshold (default is 5%), the script fetches the top 3 recent news headlines related to [Company Name] from the News API and sends an SMS notification to a specified phone number via the Twilio API, including the stock price change and the news headlines.
+This Python script monitors the stock price of a specified company using the Alpha Vantage API. It compares the closing price of the stock from yesterday to the day before yesterday. If the percentage difference in closing prices is greater than a defined threshold (default is 5%), the script fetches the top 3 recent news headlines related to a specified company from the News API and sends an SMS notification to a specified phone number via the Twilio API, including the stock price change and the news headlines.
 
 ## Features
 
-* **Stock Price Monitoring:** Fetches daily stock price data for [Company Ticker Symbol] from the Alpha Vantage API.
+* **Stock Price Monitoring:** Fetches daily stock price data for a specified company from the Alpha Vantage API.
 * **Significant Price Change Detection:** Calculates the percentage difference in the closing price between the last two trading days and triggers an alert if the change exceeds a configurable threshold (default: 5%).
-* **Relevant News Retrieval:** If a significant price change is detected, the script fetches the top 3 recent news articles related to [Company Name] from the News API.
+* **Relevant News Retrieval:** If a significant price change is detected, the script fetches the top 3 recent news articles related to specified company from the News API.
 * **SMS Notification with Stock and News:** Sends an SMS message via the Twilio API containing:
     * An emoji indicating whether the stock price went up (🔺) or down (🔻).
     * The percentage difference in the closing price.
-    * The headline and a brief description of the top 3 recent news articles about [Company Name].
+    * The headline and a brief description of the top 3 recent news articles about specified company.
 * **Configurable Stock and Threshold:** The stock ticker symbol, company name for news search, and the percentage change threshold can be easily modified in the script.
 
 ## How to Use
